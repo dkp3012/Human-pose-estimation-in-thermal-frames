@@ -32,15 +32,4 @@ International Journal of Intelligent Systems and Applications in Engineering, 12
 
 ---
 
-## 🚀 Project Goals
 
-✔ Detect humans in thermal frames  
-✔ Extract pose keypoints in COCO format  
-✔ Handle noisy and low-contrast data  
-✔ Apply data augmentation tailored for thermal imagery  
-✔ Convert annotations to YOLO format  
-✔ Train models with custom hyperparameters  
-✔ Visualize keypoints, metrics, and action classification  
-✔ Store results in structured formats for easy analysis
-
----
