@@ -1,6 +1,24 @@
 # 🤖 Human Pose Estimation in Thermal Frames using Deep Learning Techniques
 
-This project focuses on detecting humans and estimating their poses in thermal images using deep learning models like YOLOPose. Thermal images are challenging due to lack of color and texture, but essential in environments where standard RGB cameras fail—like night surveillance, healthcare monitoring, and disaster response.
+This project focuses on detecting humans and estimating their poses in thermal images using deep learning models like YOLOPose. Thermal images are challenging due to lack of color and texture, but essential in environments where standard RGB cameras fail—like night surveillance, healthcare monitoring, and disaster response. The study focuses on detecting humans, estimating 17 keypoints per person, and classifying actions into **9 predefined categories**. The Thermal-IM dataset of 9,414 annotated frames was created from 53 videos to support model training and evaluation. The paper highlights the **dataset construction, keypoint annotation, and model performance** on thermal human activities.
+# Thermal Human Action Recognition with YOLOv8-Pose
+
+**Dhananjay Kumar Prasad. (2024). Human Action Recognition in Thermal Images Using Pose Estimation.**  
+*International Journal of Intelligent Systems and Applications in Engineering, 12(23s), 3713–.*  
+[View Article](https://ijisae.org/index.php/IJISAE/article/view/7845)
+
+
+## Thermal-IM Dataset
+
+**Thermal-IM contains 9,414 thermal images extracted from 53 videos (288×384 px, 15 FPS), annotated with 17 COCO-style keypoints across 9 human action classes, ready for YOLOv8-Pose training and evaluation.**  
+[Download Dataset](YOUR_GOOGLE_DRIVE_LINK)
+
+---
+
+## Sample Action
+
+### Indoor Single-Person Activity
+![Indoor action example](images/examples/indoor_sitting.png)
 
 ---
 
@@ -26,85 +44,3 @@ International Journal of Intelligent Systems and Applications in Engineering, 12
 ✔ Store results in structured formats for easy analysis
 
 ---
-
-## 📂 Dataset Overview
-
-### 🔢 Action Classes  
-The dataset consists of thermal images organized by human actions:
-
-- 🟥 **Abnormal**  
-- 🟠 **Leg_stretching**  
-- 🟡 **Lying**  
-- 🟢 **Push-ups**  
-- 🔵 **Sitting**  
-- 🟣 **Sitting_crosslegs**  
-- 🟤 **Sit-ups**  
-- ⚪ **Standing**  
-- ⚫ **Walking**
-
-### 📁 Folder Structure
-''' bash 
-data/
-├── images/
-│ ├── train/
-│ ├── val/
-│ └── test/
-└── json_labels/
-├── train/
-├── val/
-└── test/
-
-
-
-### 📋 Annotation Format
-
-Each JSON file contains:
-
-- ✅ `class`: action label  
-- ✅ `bbox`: normalized coordinates `[x_center, y_center, width, height]`  
-- ✅ `keypoints`: 17 points, each `[x, y, confidence]`, normalized between 0 and 1  
-
-This structure ensures compatibility with YOLOPose and downstream applications.
-
----
-
-## 🔧 Dataset Processing Pipeline
-
-### 1️⃣ Annotation Conversion  
-JSON annotations are transformed into YOLO format `.txt` files containing bounding boxes and keypoints.
-
-### 2️⃣ Data Augmentation  
-Augmentations help the model learn from noisy and diverse samples:
-
-- 🔄 Horizontal flip  
-- ➕ Gaussian noise  
-- 📏 Resize transformations  
-
-### 3️⃣ Dataset Splitting  
-Automatically split into:
-
-- 📂 70% training  
-- 📂 20% validation  
-- 📂 10% testing  
-
-### 4️⃣ Data Cleaning  
-Images without detectable humans are removed to ensure meaningful training.
-
-### 5️⃣ CSV Generation  
-All annotations are exported to a CSV file for inspection and analysis.
-
----
-
-## ⚙ Installation
-
-### 📦 Requirements
-
-- Python 3.8+
-- PyTorch 1.12 or newer
-- OpenCV, NumPy, pandas, matplotlib
-- Optional: wandb for experiment tracking
-
-### 💻 Install Dependencies
-
-```bash
-pip install -r requirements.txt
