@@ -1,7 +1,5 @@
 # 🤖 Human Pose Estimation in Thermal Frames using Deep Learning Techniques
 
-![Thermal Pose](images/examples/indoor_sitting.png)
-
 Detect humans and estimate their poses in **thermal images** using **YOLOPose**. Thermal imaging is challenging due to lack of color and texture, but crucial in environments where RGB cameras fail—🌙 night surveillance, 🏥 healthcare monitoring, 🌪️ disaster response.  
 
 This project focuses on:
