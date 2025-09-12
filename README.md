@@ -20,7 +20,7 @@ The **Thermal-IM dataset** of 9,414 annotated frames from 53 videos supports mod
 
 ---
 
-## 📂 Thermal-IM Dataset
+## 📂 Thermal-IM Dataset (Custom) 
 
 **Thermal-IM contains 9,414 thermal images extracted from 53 videos**, annotated with 17 COCO-style keypoints across 9 human action classes, ready for YOLOv8-Pose training and evaluation.  
 
@@ -55,9 +55,3 @@ International Journal of Intelligent Systems and Applications in Engineering, 12
 [🔗 https://ijisae.org/index.php/IJISAE/article/view/7845](https://ijisae.org/index.php/IJISAE/article/view/7845)
 
 ---
-
-## 🚀 Quick Start
-
-```bash
-# Install dependencies
-pip install ultralytics torch torchvision opencv-python
