@@ -43,7 +43,7 @@ The dataset consists of thermal images organized by human actions:
 - ⚫ **Walking**
 
 ### 📁 Folder Structure
-
+''' bash 
 data/
 ├── images/
 │ ├── train/
